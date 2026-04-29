@@ -1,4 +1,4 @@
-with open(r"C:\Users\kartv\Downloads\Bacillus_brevis.txt","r") as f:
+with open(r"peptide_encoding.txt","r") as f:
     lines=f.read().strip().split()
     amino=lines[1]
     string=lines[0]
@@ -70,5 +70,5 @@ graph={"UUU":"F", "UUC":"F", "UUA":"L", "UUG":"L",
     "GCU":"A", "GCC":"A", "GCA":"A", "GCG":"A",
     "GAU":"D", "GAC":"D", "GAA":"E", "GAG":"E",
     "GGU":"G", "GGC":"G", "GGA":"G", "GGG":"G"}
-y=dna(string,graph,"VKLFPWFNQY")
+y=dna(string,graph, amino)
 print(y)
